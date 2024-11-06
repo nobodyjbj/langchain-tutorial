@@ -2,3 +2,5 @@
 .env
 .python-version
 __pycache__/
+.langchain_env
+.venv/

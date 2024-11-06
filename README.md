@@ -27,8 +27,8 @@
 
 ```shell
 # python 설치
-> pyenv install 3.11
-> pyenv global 3.11
+> pyenv install 3.12.7
+> pyenv global 3.12.7
 > exec zsh
 
 # python 버전 확인
