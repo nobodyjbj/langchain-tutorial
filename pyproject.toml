@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "langchain-note-2024"
+version = "0.1.0"
+description = ""
+authors = ["wemade_june <nobody.jbj@wemade.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+python-dotenv = "^1.0.1"
+langchain = "^0.3.7"
+openapi = "^2.0.0"
+langchain-openai = "^0.2.6"
+langsmith = "^0.1.140"
+langchain-community = "^0.3.5"
+
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.29.5"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
