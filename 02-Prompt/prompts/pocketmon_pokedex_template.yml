@@ -1,0 +1,20 @@
+_type: "prompt"
+template: |
+  {pocketmon_name} 에 대한 정보를 알려주세요.
+  포켓몬의 특징을 다음의 [FORMAT]에 맞게 정리하여 답변해주세요.
+  한글로 작성해주세요.
+  존재하지 않는 포켓몬일 경우 '{pocketmon_name}에 대한 정보를 찾을 수 없습니다.'라고 답변해주세요.
+  ---
+  [FORMAT]
+  이름:
+  속성:
+  유형:
+  진화 단계:
+  주요 스킬:
+  설명:
+  체력:
+  공격력:
+  방어력:
+  
+input_variables:
+- "pocketmon_name"
