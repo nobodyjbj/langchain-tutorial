@@ -13,6 +13,7 @@ openapi = "^2.0.0"
 langchain-openai = "^0.2.6"
 langsmith = "^0.1.140"
 langchain-community = "^0.3.5"
+langchain-chroma = "^0.1.4"
 
 
 [tool.poetry.group.dev.dependencies]
