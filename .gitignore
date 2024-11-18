@@ -5,3 +5,4 @@ __pycache__/
 .langchain_env
 .venv
 .idea
+**/.cache/files/**
