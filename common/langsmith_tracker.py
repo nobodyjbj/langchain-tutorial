@@ -1,7 +1,7 @@
 import os
 
 
-def langsmith(project_name=None, set_enable=True):
+def set_tracking(project_name=None, set_enable=True):
 
     if set_enable:
         result = os.environ.get("LANGCHAIN_API_KEY")
