@@ -126,7 +126,7 @@ AI 코드 어시스턴트 관련 단축키
 - 코드 포맷: `Command + Option + L`
 - 코드 주석 처리: `Command + /`
 
-### Cursor 단축키
+### VSCode 단축키
 
 AI 기능
 
