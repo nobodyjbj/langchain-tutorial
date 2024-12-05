@@ -7,7 +7,7 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.document_loaders import PyMuPDFLoader
 from langchain_community.vectorstores import FAISS
 from langchain_core.runnables import RunnablePassthrough
-from tracker.logging import LangsmithTracker
+from utility.logging import LangsmithTracker
 
 import os
 from dotenv import load_dotenv
