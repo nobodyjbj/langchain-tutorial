@@ -2,12 +2,10 @@ import streamlit as st
 from langchain_core.messages.chat import ChatMessage
 from langchain_core.prompts import load_prompt
 from langchain_core.output_parsers import StrOutputParser
-from langchain_openai import ChatOpenAI, OpenAIEmbeddings
-from langchain_text_splitters import RecursiveCharacterTextSplitter
-from langchain_community.document_loaders import PyMuPDFLoader
-from langchain_community.vectorstores import FAISS
+from langchain_openai import ChatOpenAI
 from langchain_core.runnables import RunnablePassthrough
 from utility.logging import LangsmithTracker
+from retirevar import create_retriever
 
 import os
 from dotenv import load_dotenv
@@ -62,24 +60,7 @@ def embed_file(file):
     with open(file_path, "wb") as f:
         f.write(file_content)
 
-    # 1단계: 문서 로드(Load Documents)
-    loader = PyMuPDFLoader(file_path=file_path)
-    docs = loader.load()
-
-    # 2단계: 문서 분할(split documents)
-    text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=50)
-    split_documents = text_splitter.split_documents(docs)
-
-    # 3단계: 임베딩(Embedding) 생성
-    embeddings = OpenAIEmbeddings()
-
-    # 4단계: DB 생성(Create DB) 및 저장, VectorStore 생성, FAISS는 메모리 공간에 저장합니다.
-    vectorstore = FAISS.from_documents(documents=split_documents, embedding=embeddings)
-
-    # 5단계: 검색기(Retriever) 생성
-    retriever = vectorstore.as_retriever()
-
-    return retriever
+    return create_retriever(file_path)
 
 
 # chain 생성
