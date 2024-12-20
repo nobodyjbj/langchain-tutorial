@@ -439,6 +439,9 @@ def invoke_graph(
                             else:
                                 print(list_item)
                     elif isinstance(v, dict):
-                        for node_chunk_key, node_chunk_value in node_chunk.items():
-                            print(f"{node_chunk_key}:\n{node_chunk_value}")
+                        for dict_key, dict_value in v.items():
+                            print(f"{' ' * 4}{dict_key}: {dict_value}")
+                    elif isinstance(v, str):
+                        color = depth_colors.get(3, depth_colors["default"])
+                        print(f"{color}{k}{depth_colors['reset']}:\n{v}")
                 print("=" * 50)
