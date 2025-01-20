@@ -1,7 +1,9 @@
 import random
-from IPython.display import Image, display
-from langgraph.graph.state import CompiledStateGraph
 from dataclasses import dataclass
+
+from IPython.display import Image, display
+from langchain_core.runnables.graph import CurveStyle, MermaidDrawMethod, NodeStyles
+from langgraph.graph.state import CompiledStateGraph
 
 
 @dataclass
@@ -40,7 +42,7 @@ def visualize_graph(graph, xray=False):
                 Image(
                     graph.get_graph(xray=xray).draw_mermaid_png(
                         background_color="white",
-                        node_colors=NodeStyles(),
+                        draw_method=MermaidDrawMethod.API,
                     )
                 )
             )
