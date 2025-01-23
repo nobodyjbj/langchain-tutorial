@@ -1,8 +1,8 @@
 [tool.poetry]
-name = "langchain-note-2024"
+name = "langchain-tutorial"
 version = "0.1.0"
 description = ""
-authors = ["wemade_june <nobody.jbj@wemade.com>"]
+authors = ["june <nobody.jbj@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
