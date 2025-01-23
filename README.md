@@ -40,7 +40,7 @@
 
 ### 설치에 필요한 모듈은 settings.ipynb 파일 참고
 
-[setting module list](https://github.com/nobodyjbj/langchain_note_2024/blob/main/setting.ipynb)
+[setting module list](https://github.com/nobodyjbj/langchain_tutorial/blob/main/setting.ipynb)
 
 ### poetry 명령어
 

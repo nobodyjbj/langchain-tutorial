@@ -18,6 +18,9 @@ class LLMs(Enum):
     UPSTAGE_SOLAR_PRO = "solar-pro"
     UPSTAGE = UPSTAGE_SOLAR_PRO
 
+    GEMINI_PRO = "gemini-1.5-pro"
+    GEMINI_FLASH = "gemini-1.5-flash"
+
 
 class Embeddings(Enum):
     OPENAI_EMBEDDING_SMALL = "text-embedding-3-small"
